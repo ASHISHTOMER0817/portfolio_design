@@ -2,19 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Playfair Display", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
 }
 
 body {
-  height: 100%;
+	height: 100%;
+	color: black;
 }
 
+.auto_written_text {
+  letter-spacing: 4px;
+  border-right: 4px solid;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	animation: typing 4s steps(37), cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+	50% {
+		border-color: transparent;
+	}
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+}
 
 /* body {
   margin: 0;
