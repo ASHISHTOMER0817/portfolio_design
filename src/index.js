@@ -2,20 +2,20 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 // import { LuDot } from "react-icons/lu";
-import { SiGmail } from "react-icons/si";
-import { AiFillGithub } from "react-icons/ai";
-import { SiLinkedin } from "react-icons/si";
-import { SiApachedolphinscheduler } from "react-icons/si";
-import amazon_icon from "./assets/icons/icons8-amazon.svg";
-import { IoCloudDownload } from "react-icons/io5";
-import doodle from "./assets/icons/icons8-stan-marsh.svg";
+// import { SiGmail } from "react-icons/si";
+// import { AiFillGithub } from "react-icons/ai";
+// import { SiLinkedin } from "react-icons/si";
+// import { SiApachedolphinscheduler } from "react-icons/si";
+// import amazon_icon from "./assets/icons/icons8-amazon.svg";
+// import { IoCloudDownload } from "react-icons/io5";
+// import doodle from "./assets/icons/icons8-stan-marsh.svg";
 
-// import App from "./App";
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
-		<div className="h-screen overflow-y-auto snap-y snap-mandatory bg-gradient-to-r from-sky-500 to-indigo-500 ">
+		{/* <div className="h-screen overflow-y-auto snap-y snap-mandatory bg-gradient-to-r from-sky-500 to-indigo-500 ">
 			<div className="h-screen flex flex-col items-center justify-center relative snap-center mx-auto">
 				<div className="px-8 pt-10 flex justify-between mt-0 shadow-md w-full absolute top-0">
 					<section>
@@ -214,7 +214,7 @@ root.render(
 					})}
 				</div>{" "}
 			</div>
-		</div>
-		<footer className=""></footer>
+		</div> */}
+		<App/>
 	</React.StrictMode>
 );
