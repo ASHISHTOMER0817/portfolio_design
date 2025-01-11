@@ -1,14 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-// import { LuDot } from "react-icons/lu";
-// import { SiGmail } from "react-icons/si";
-// import { AiFillGithub } from "react-icons/ai";
-// import { SiLinkedin } from "react-icons/si";
-// import { SiApachedolphinscheduler } from "react-icons/si";
-// import amazon_icon from "./assets/icons/icons8-amazon.svg";
-// import { IoCloudDownload } from "react-icons/io5";
-// import doodle from "./assets/icons/icons8-stan-marsh.svg";
 
 import App from "./App";
 

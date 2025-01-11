@@ -17,15 +17,17 @@ import js from "./assets/icons/js-svgrepo-com.svg";
 import github from "./assets/icons/github-142-svgrepo-com.svg";
 
 function App() {
+	
 	return (
 		// <>
-		<div className="h-screen overflow-y-auto snap-y snap-mandatory bg-gradient-to-r bg-black text-white ">
+		<div className="h-screen overflow-y-auto snap-y snap-mandatory bg-gradient-to-r bg-black text-white">
 			<div
 				id="info"
 				className=" h-[70%] flex flex-col items-center justify-center relative snap-center mx-auto"
 			>
-				<div className="px-8 py-5 flex bg-gray-950 justify-between items-center mt-0 shadow-md w-full absolute top-0">
-					<section>
+				<div className="px-8 max-[768px]:px-4 max-[768px]:gap-4 py-5 flex blu bg-gray-950 justify-between items-center mt-0 shadow-md w-full absolute top-0">
+					<div className="text-4xl font-bold">A</div>
+					{/* <section>
 						<span className="relative text-4xl font-bold group">
 							<span className="opacity-100 group-hover:opacity-0 transition-opacity duration-300">
 								A
@@ -34,8 +36,8 @@ function App() {
 								Aditya
 							</span>
 						</span>
-					</section>
-					<section className="flex gap-8">
+					</section> */}
+					<section className="flex gap-8 max-[768px]:overflow-scroll max-[768px]:w-full ">
 						{[
 							{
 								main: "Projects",
@@ -50,7 +52,7 @@ function App() {
 							{ main: "Contact", link: "#contact" },
 							{
 								main: "Resume",
-								icon: <IoCloudDownload  />,
+								icon: <IoCloudDownload />,
 								link: "Ashish Tomer's resume.pdf",
 							},
 						].map((item, index) => {
@@ -75,7 +77,8 @@ function App() {
 										className="text-lg font-bold hover:text-gray-700 flex gap-2 items-center"
 									>
 										{item.main}
-										{item.main === "Resume" && (
+										{item.main ===
+											"Resume" && (
 											<div className="float-right">
 												{
 													item.icon
@@ -89,13 +92,13 @@ function App() {
 						})}
 					</section>
 				</div>
-				<div className=" h-[80%] w-[75%] flex justify-evenly items-center">
+				<div className=" h-[80%] w-[75%] flex md:flex-row max-[769px]:my-auto flex-col justify-evenly items-center">
 					<div>
 						<img src={doodle} alt="" />
 					</div>
 					<div
 						className="inline-block "
-						style={{ flexBasis: "75%" }}
+						// style={{ flexBasis: "75%" }}
 					>
 						<div className=" auto_written_text font-semibold text-xl">
 							Dynamic frontend developer with over 1
@@ -106,7 +109,10 @@ function App() {
 					</div>
 				</div>
 			</div>
-			<div id="technologies" className=" snap-center px-6 py-8 my-20 gap-[3.5rem] items-center flex flex-col">
+			<div
+				id="technologies"
+				className=" snap-center px-6 py-8 my-4 gap-[3.5rem] items-center flex flex-col"
+			>
 				<div className="text-3xl font-bold underline underline-offset-2">
 					Technologies learned
 				</div>
@@ -219,7 +225,7 @@ function App() {
 				<div className="text-3xl font-bold underline underline-offset-2">
 					Projects
 				</div>
-				<div className="justify-between w-8/12 mx-auto gap-10 items-center my-auto grid">
+				<div className="justify-between w-8/12 mx-auto gap-10 items-center my-auto flex flex-col md:grid">
 					{[
 						{
 							url: "https://d3ui957tjb5bqd.cloudfront.net/uploads/2020/06/11092310/Graphic-Design-Portfolio-Tips-8.jpg",
@@ -276,9 +282,9 @@ function App() {
 				className=" snap-center flex flex-col px-6 py-8 my-20 gap-[3.5rem] text-2xl items-center"
 			>
 				<div className="text-3xl font-bold underline underline-offset-2">
-					Work
+					Work Experience
 				</div>
-				<div className="my-auto flex gap-10 px-10">
+				<div className="my-auto flex md:flex-row flex-col  gap-10 px-10">
 					<div className="flex flex-col">
 						<img
 							src={amazon_icon}
@@ -302,34 +308,37 @@ function App() {
 							</div>
 						</div>
 					</div>
-					<div className="border border-l-2 border-white h-64"></div>
+					<div className="border border-l-2 border-white md:h-64 max-[768px]:hidden"></div>
+					<div className="border border-l-2 border-white w-64 md:hidden  mx-auto"></div>
 
-					<div className=" flex flex-col gap-10">
-						<div className="font-bold mx-auto">
+					{/* <div className=" flex flex-col gap-10"> */}
+						{/* <div className="font-bold mx-auto">
 							Experience:
+						</div> */}
+						<div className="flex flex-col">
+							<div className="font-bold mx-auto text-[20px] text-gray-700 ml-3">
+								Developed a React Native mobile
+								app that tracks workout
+								progress. Integrated local
+								storage and API for real-time
+								data updates.
+							</div>
+							<div className="font-bold mx-auto text-[20px] text-gray-700 ml-3">
+								Developed a React Native mobile
+								app that tracks workout
+								progress. Integrated local
+								storage and API for real-time
+								data updates.
+							</div>
+							<div className="font-bold mx-auto text-[20px] text-gray-700 ml-3">
+								Developed a React Native mobile
+								app that tracks workout
+								progress. Integrated local
+								storage and API for real-time
+								data updates.
+							</div>
 						</div>
-						<div>
-
-						<div className="font-bold mx-auto text-[20px] text-gray-700 ml-3">
-							Developed a React Native mobile app
-							that tracks workout progress.
-							Integrated local storage and API for
-							real-time data updates.
-						</div>
-						<div className="font-bold mx-auto text-[20px] text-gray-700 ml-3">
-							Developed a React Native mobile app
-							that tracks workout progress.
-							Integrated local storage and API for
-							real-time data updates.
-						</div>
-						<div className="font-bold mx-auto text-[20px] text-gray-700 ml-3">
-							Developed a React Native mobile app
-							that tracks workout progress.
-							Integrated local storage and API for
-							real-time data updates.
-						</div>
-						</div>
-					</div>
+					{/* </div> */}
 				</div>
 			</div>
 
@@ -342,47 +351,11 @@ function App() {
 				</div>
 				<div className="flex justify-center gap-6">
 					{[
-						{
-							icons: (
-								<SiGmail className="font-bold text-base duration-300 cursor-pointer hover:text-gray-700 text-white" />
-							),
-							name: "Gmail",
-						},
-						{
-							icons: (
-								<SiLinkedin className="font-bold text-base duration-300 cursor-pointer hover:text-gray-700 text-white" />
-							),
-							name: "LinkedIn",
-						},
-						{
-							icons: (
-								<AiFillGithub className="font-bold text-base duration-300 cursor-pointer hover:text-gray-700 text-white" />
-							),
-							name: "Github",
-						},
-						{
-							icons: (
-								<SiApachedolphinscheduler className="font-bold text-base duration-300 cursor-pointer hover:text-gray-700 text-white" />
-							),
-							name: "Twitter",
-						},
-					].map(({ icons, name }, index) => {
-						return (
-							// <div
-							// 	key={index}
-							// 	className="flex items-center group flex-col gap-2 cursor-pointer"
-							// >
-							// 	{icons}
-							// 	<a
-							// 		href="/"
-							// 		className="font-bold group-hover:text-gray-700"
-							// 	>
-							// 		{name}
-							// 	</a>
-							// </div>
-							<>{icons}</>
-						);
-					})}
+						<SiGmail className="font-bold text-base duration-300 cursor-pointer hover:text-gray-700 text-white" />,
+						<SiLinkedin className="font-bold text-base duration-300 cursor-pointer hover:text-gray-700 text-white" />,
+						<AiFillGithub className="font-bold text-base duration-300 cursor-pointer hover:text-gray-700 text-white" />,
+						<SiApachedolphinscheduler className="font-bold text-base duration-300 cursor-pointer hover:text-gray-700 text-white" />,
+					].map(( icons ) => {return icons})}
 				</div>{" "}
 			</div>
 		</div>
