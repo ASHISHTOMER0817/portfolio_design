@@ -52,7 +52,7 @@ body {
 	width: 100%;
 	white-space: pre-wrap; /* Allows text to wrap to new lines */
 	overflow: hidden;
-	animation: typing 7s steps(117), cursor 0.4s step-end infinite alternate;
+	animation: typing 4s steps(26), cursor 0.4s step-end infinite alternate;
     }
     
     @keyframes cursor {

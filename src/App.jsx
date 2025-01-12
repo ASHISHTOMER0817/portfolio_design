@@ -15,17 +15,19 @@ import python from "./assets/icons/python-svgrepo-com.svg";
 import nodejs from "./assets/icons/nodejs-svgrepo-com.svg";
 import js from "./assets/icons/js-svgrepo-com.svg";
 import github from "./assets/icons/github-142-svgrepo-com.svg";
+import MyComponent from "./component/typed";
+import ContactForm from "./component/ContactForm";
+import bootstrap from "./assets/icons/bootstrap-fill-svgrepo-com.svg";
+import docker from "./assets/icons/docker-svgrepo-com.svg";
+import mongodb from "./assets/icons/mongodb-svgrepo-com.svg";
+import nextjs from "./assets/icons/nextjs-icon-svgrepo-com.svg";
 
 function App() {
-	
 	return (
 		// <>
 		<div className="h-screen overflow-y-auto snap-y snap-mandatory bg-gradient-to-r bg-black text-white">
-			<div
-				id="info"
-				className=" h-[70%] flex flex-col items-center justify-center relative snap-center mx-auto"
-			>
-				<div className="px-8 max-[768px]:px-4 max-[768px]:gap-4 py-5 flex blu bg-gray-950 justify-between items-center mt-0 shadow-md w-full absolute top-0">
+			<div id="info" className=" h-[90vh] relative snap-center">
+				<div className="px-8 max-[768px]:px-4 max-[768px]:gap-4 py-5 flex blu bg-gray-950 justify-between items-center mt-0 shadow-md w-full top-0">
 					<div className="text-4xl font-bold">A</div>
 					{/* <section>
 						<span className="relative text-4xl font-bold group">
@@ -92,19 +94,30 @@ function App() {
 						})}
 					</section>
 				</div>
-				<div className=" h-[80%] w-[75%] flex md:flex-row max-[769px]:my-auto flex-col justify-evenly items-center">
+				<div className=" h-[80%] w-[75%] flex md:flex-row max-[769px]:my-auto mx-auto flex-col justify-between items-center">
 					<div>
 						<img src={doodle} alt="" />
 					</div>
-					<div
-						className="inline-block "
-						// style={{ flexBasis: "75%" }}
-					>
-						<div className=" auto_written_text font-semibold text-xl">
-							Dynamic frontend developer with over 1
-							year of experience, specializing in
-							creating innovative and modular
-							solutions.
+
+					{/* <div className=" font-semibold inline-block text-xl">
+							<div className="auto_written_text inline-block">
+								Dynamic frontend developer{" "}
+							</div>
+							<div className="font-medium text-lg">
+								{" "}
+								with over 1 year of experience,
+								specializing in creating
+								innovative and modular
+								solutions.{" "}
+							</div>
+						</div> */}
+					<div className="flex flex-col text-xl items-center justify-center">
+						<MyComponent />
+						<div className="font-medium text-lg w-2/5">
+							{" "}
+							with over 1 year of experience,
+							specializing in creating innovative
+							and modular solutions.{" "}
 						</div>
 					</div>
 				</div>
@@ -118,35 +131,25 @@ function App() {
 				</div>
 				<div className="flex flex-wrap justify-center gap-10 my-auto">
 					{[
-						{
-							icon: html5,
-							name: "HTML",
-						},
-						{
-							icon: css,
-							name: "CSS",
-						},
-						{
-							icon: js,
-							name: "JS",
-						},
-						{
-							icon: python,
-							name: "Python",
-						},
-						{
-							icon: react,
-							name: "React",
-						},
-						{
-							icon: github,
-							name: "Github",
-						},
-						{
-							icon: nodejs,
-							name: "Node.js",
-						},
-					].map(({ icon, name }, index) => {
+						html5,
+
+						css,
+
+						js,
+
+						python,
+
+						react,
+
+						github,
+
+						nodejs,
+
+						bootstrap,
+						nextjs,
+						docker,
+						mongodb,
+					].map((icon, index) => {
 						return (
 							<div
 								key={index}
@@ -156,8 +159,8 @@ function App() {
 									src={icon}
 									alt=""
 									className={`w-20 ${
-										name === "Github" &&
-										"bg-white"
+										index === 5 || index === 7 || index === 8 ? 
+										"bg-[#19efff]":''
 									}`}
 								/>
 								{/* <div>{name}</div> */}
@@ -312,36 +315,33 @@ function App() {
 					<div className="border border-l-2 border-white w-64 md:hidden  mx-auto"></div>
 
 					{/* <div className=" flex flex-col gap-10"> */}
-						{/* <div className="font-bold mx-auto">
+					{/* <div className="font-bold mx-auto">
 							Experience:
 						</div> */}
-						<div className="flex flex-col">
-							<div className="font-bold mx-auto text-[20px] text-gray-700 ml-3">
-								Developed a React Native mobile
-								app that tracks workout
-								progress. Integrated local
-								storage and API for real-time
-								data updates.
-							</div>
-							<div className="font-bold mx-auto text-[20px] text-gray-700 ml-3">
-								Developed a React Native mobile
-								app that tracks workout
-								progress. Integrated local
-								storage and API for real-time
-								data updates.
-							</div>
-							<div className="font-bold mx-auto text-[20px] text-gray-700 ml-3">
-								Developed a React Native mobile
-								app that tracks workout
-								progress. Integrated local
-								storage and API for real-time
-								data updates.
-							</div>
+					<div className="flex flex-col">
+						<div className="font-bold mx-auto text-[20px] text-gray-700 ml-3">
+							Developed a React Native mobile app
+							that tracks workout progress.
+							Integrated local storage and API for
+							real-time data updates.
 						</div>
+						<div className="font-bold mx-auto text-[20px] text-gray-700 ml-3">
+							Developed a React Native mobile app
+							that tracks workout progress.
+							Integrated local storage and API for
+							real-time data updates.
+						</div>
+						<div className="font-bold mx-auto text-[20px] text-gray-700 ml-3">
+							Developed a React Native mobile app
+							that tracks workout progress.
+							Integrated local storage and API for
+							real-time data updates.
+						</div>
+					</div>
 					{/* </div> */}
 				</div>
 			</div>
-
+			<ContactForm />
 			<div
 				id="contact"
 				className=" items-center snap-center px-8 py-4 flex flex-col justify-center gap-4 bg-gray-950"
@@ -355,7 +355,9 @@ function App() {
 						<SiLinkedin className="font-bold text-base duration-300 cursor-pointer hover:text-gray-700 text-white" />,
 						<AiFillGithub className="font-bold text-base duration-300 cursor-pointer hover:text-gray-700 text-white" />,
 						<SiApachedolphinscheduler className="font-bold text-base duration-300 cursor-pointer hover:text-gray-700 text-white" />,
-					].map(( icons ) => {return icons})}
+					].map((icons) => {
+						return icons;
+					})}
 				</div>{" "}
 			</div>
 		</div>
