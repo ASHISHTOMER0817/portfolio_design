@@ -132,39 +132,29 @@ function App() {
 				<div className="flex flex-wrap justify-center gap-10 my-auto">
 					{[
 						html5,
-
 						css,
-
 						js,
-
 						python,
-
 						react,
-
 						github,
-
 						nodejs,
-
 						bootstrap,
 						nextjs,
 						docker,
 						mongodb,
 					].map((icon, index) => {
 						return (
-							<div
-								key={index}
-								className="flex flex-col items-center gap-2"
-							>
-								<img
-									src={icon}
-									alt=""
-									className={`w-20 ${
-										index === 5 || index === 7 || index === 8 ? 
-										"bg-[#19efff]":''
-									}`}
-								/>
-								{/* <div>{name}</div> */}
-							</div>
+							<img
+								src={icon}
+								alt=""
+								className={`w-20 ${
+									index === 5 ||
+									index === 7 ||
+									index === 8
+										? "bg-[#19efff]"
+										: ""
+								}`}
+							/>
 						);
 					})}
 				</div>
