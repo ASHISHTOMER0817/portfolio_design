@@ -1,5 +1,3 @@
-// import { useState } from "react";
-// import "./App.css";
 import "./index.css";
 import { SiGmail } from "react-icons/si";
 import { AiFillGithub } from "react-icons/ai";
@@ -29,16 +27,6 @@ function App() {
 			<div id="info" className=" h-[90vh] relative snap-center">
 				<div className="px-8 max-[768px]:px-4 max-[768px]:gap-4 py-5 flex blu bg-gray-950 justify-between items-center mt-0 shadow-md w-full top-0">
 					<div className="text-4xl font-bold">A</div>
-					{/* <section>
-						<span className="relative text-4xl font-bold group">
-							<span className="opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-								A
-							</span>
-							<span className="absolute left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-								Aditya
-							</span>
-						</span>
-					</section> */}
 					<section className="flex gap-8 max-[768px]:overflow-scroll max-[768px]:w-full ">
 						{[
 							{
@@ -98,19 +86,6 @@ function App() {
 					<div>
 						<img src={doodle} alt="" />
 					</div>
-
-					{/* <div className=" font-semibold inline-block text-xl">
-							<div className="auto_written_text inline-block">
-								Dynamic frontend developer{" "}
-							</div>
-							<div className="font-medium text-lg">
-								{" "}
-								with over 1 year of experience,
-								specializing in creating
-								innovative and modular
-								solutions.{" "}
-							</div>
-						</div> */}
 					<div className="flex flex-col text-xl items-center justify-center">
 						<MyComponent />
 						<div className="font-medium text-lg w-2/5">
@@ -163,58 +138,6 @@ function App() {
 				id="projects"
 				className=" snap-center px-6 py-8 my-20 gap-[3.5rem] items-center flex flex-col"
 			>
-				{/* <section className="px-6 py-8 gap-5 items-center flex flex-col">
-				<div className="text-3xl font-bold underline underline-offset-2">
-						Technologies learned
-					</div>
-					<div className="flex flex-wrap justify-center gap-10 my-auto">
-						{[
-							{
-								icon: html5,
-								name: "HTML",
-							},
-							{
-								icon: css,
-								name: "CSS",
-							},
-							{
-								icon: js,
-								name: "JS",
-							},
-							{
-								icon: python,
-								name: "Python",
-							},
-							{
-								icon: react,
-								name: "React",
-							},
-							{
-								icon: github,
-								name: "Github",
-							},
-							{
-								icon: nodejs,
-								name: "Node.js",
-							},
-						].map(({ icon, name }, index) => {
-							return (
-								<div
-									key={index}
-									className="flex flex-col items-center gap-2"
-								>
-									<img
-										src={icon}
-										alt=""
-										className="w-20"
-									/>
-									<div>{name}</div>
-								</div>
-							);
-						})}
-					</div>
-				</section> */}
-
 				<div className="text-3xl font-bold underline underline-offset-2">
 					Projects
 				</div>
@@ -304,10 +227,6 @@ function App() {
 					<div className="border border-l-2 border-white md:h-64 max-[768px]:hidden"></div>
 					<div className="border border-l-2 border-white w-64 md:hidden  mx-auto"></div>
 
-					{/* <div className=" flex flex-col gap-10"> */}
-					{/* <div className="font-bold mx-auto">
-							Experience:
-						</div> */}
 					<div className="flex flex-col">
 						<div className="font-bold mx-auto text-[20px] text-gray-700 ml-3">
 							Developed a React Native mobile app
@@ -328,7 +247,6 @@ function App() {
 							real-time data updates.
 						</div>
 					</div>
-					{/* </div> */}
 				</div>
 			</div>
 			<ContactForm />

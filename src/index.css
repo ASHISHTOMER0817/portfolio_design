@@ -17,35 +17,6 @@ body {
 	color: white;
 }
 
-/* .auto_written_text {
-	letter-spacing: 4px;
-	border-right: 4px solid;
-	width: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	text-wrap: wrap;
-	animation: typing 7s steps(117), cursor 0.4s step-end infinite alternate;
-}
-
-@keyframes cursor {
-	50% {
-		border-color: transparent;
-	}
-}
-
-@keyframes typing {
-	from {
-		width: 0;
-	}
-} */
-
-
-
-
-
-
-
-
 .auto_written_text {
 	display: inline-block;
 	letter-spacing: 4px;
@@ -70,33 +41,3 @@ body {
 	  max-width: 100%;
 	}
     }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
